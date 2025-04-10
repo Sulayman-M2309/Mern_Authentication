@@ -42,14 +42,14 @@ const Navbar = () => {
         <div className="w-24 h-6 pl-0.5  justify-center items-center rounded-full bg-black text-white relative group">
           {userData.name.toUpperCase()}
           <div className=" absolute w-full hidden group-hover:block top-5 right-16 z-10  text-black rounded pt-10">
-            <ul className="list-none m-0 p-2 bg-gray-200 text-sm">
+            <ul className="list-none font-semibold m-0 p-2 h-16 shadow-lg rounded-lg bg-gray-200 text-sm">
               {!userData.isAccountVerified && (
-                <li onClick={sendVerificationOtp} className="py-1 px-2 hover:bg-gray-300 cursor-pointer">
+                <li onClick={sendVerificationOtp} className="py-3 px-2 hover:bg-red-300 cursor-pointer">
                   Verify Email
                 </li>
               )}
 
-              <li  onClick={logout} className="py-1 px-2 hover:bg-gray-300 cursor-pointer pr-10">Logout</li>
+              <li  onClick={logout} className="py-1 px-2 hover:bg-red-300 cursor-pointer pr-10">Logout</li>
             </ul>
           </div>
         </div>

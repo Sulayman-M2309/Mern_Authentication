@@ -71,7 +71,7 @@ const Login = () => {
               <input
                 onChange={(e) => setName(e.target.value)}
                 value={name}
-                className="bg-transparent outline-none "
+                className="bg-transparent outline-none h-8 w-full "
                 placeholder="Enter Your Name"
                 required
                 type="text"
@@ -88,7 +88,7 @@ const Login = () => {
             
               onChange={(e) => setEmail(e.target.value)}
               value={email}
-              className="bg-transparent outline-none"
+              className="bg-transparent outline-none h-8 w-full"
               placeholder="Enter Your Email"
               required
               type="email"
@@ -100,7 +100,7 @@ const Login = () => {
             <input
               onChange={(e) => setPassword(e.target.value)}
               value={password}
-              className="bg-transparent outline-none"
+              className="bg-transparent outline-none h-8 w-full"
               placeholder="Enter Your password"
               required
               type="password"
@@ -109,30 +109,31 @@ const Login = () => {
           <br />
           <p
             onClick={() => navigate("/reset-password")}
-            className="mb-4 text-indigo-500 cursor-pointer"
+            className="mb-4 text-indigo-500 cursor-pointer text-md font-semibold"
           >
             Forgate Password?
           </p>
-          <button className="w-full py-3 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-900">
+       
+          <button className="border text-md font-semibold w-full text-white border-gray-500 hover:bg-amber-600 bg-blue-400 rounded-2xl transition-all btn btn-success px-12">
             {state}
           </button>
         </form>
         {state === "Sign Up" ? (
-          <p className="text-gray-500 text-center text-sm mt-6">
+          <p className="text-gray-500 text-center text-lg font-semibold mt-6">
             Alreday have an account?{" "}
             <span
               onClick={() => setState("Login")}
-              className="text-blue-500 cursor-pointer underline"
+              className="text-blue-500 cursor-pointer underline text-md font-semibold"
             >
               Login here
             </span>
           </p>
         ) : (
-          <p className="text-gray-500 text-center text-sm mt-6 mb-5">
+          <p className="text-gray-500 text-center text-lg font-semibold mt-6 mb-5">
             Don't have an account?{" "}
             <span
               onClick={() => setState("Sign Up")}
-              className="text-blue-500 cursor-pointer underline"
+              className="text-blue-500 cursor-pointer underline text-md font-semibold"
             >
               SignUp{" "}
             </span>
